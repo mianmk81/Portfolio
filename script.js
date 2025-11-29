@@ -709,9 +709,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   if (contactForm) {
+    // Track form engagement (when user starts typing)
+    let formEngaged = false;
+    const formFields = contactForm.querySelectorAll('input, textarea');
+    formFields.forEach(field => {
+      field.addEventListener('focus', function() {
+        if (!formEngaged) {
+          formEngaged = true;
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_engagement', {
+              form_name: 'contact_form',
+              event_timestamp: new Date().toISOString()
+            });
+          }
+        }
+      }, { once: true });
+    });
+
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      
+
       // Show loading state
       const submitBtn = contactForm.querySelector('.submit-btn');
       const originalBtnText = submitBtn.textContent;
@@ -737,6 +754,16 @@ document.addEventListener('DOMContentLoaded', function() {
           formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
           formStatus.classList.remove('hidden', 'error');
           formStatus.classList.add('success');
+
+          // Track successful form submission
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submission', {
+              form_name: 'contact_form',
+              form_status: 'success',
+              event_timestamp: new Date().toISOString()
+            });
+          }
+
           contactForm.reset();
           // Clear validation classes after reset
           nameInput.classList.remove('valid', 'invalid');
@@ -747,6 +774,16 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(function(error) {
           // Error - silently log but don't show error to user
           console.error('Email sending failed:', error);
+
+          // Track form submission failure
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submission', {
+              form_name: 'contact_form',
+              form_status: 'failed',
+              error_message: error.text || 'Unknown error',
+              event_timestamp: new Date().toISOString()
+            });
+          }
           // Don't show error message to user
         })
         .finally(function() {

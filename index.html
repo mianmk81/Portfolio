@@ -32,6 +32,15 @@
 
     gtag('config', 'G-BW7RTRK39J');
   </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "uduo7ge4a7");
+  </script>
 </head>
 
 <body>
@@ -1140,6 +1149,139 @@
     });
   </script>
 
+  <!-- Web Core Vitals Tracking -->
+  <script>
+    // Track Core Web Vitals using native browser APIs
+    function sendWebVital(metric) {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          metric_id: metric.id,
+          metric_value: metric.value,
+          metric_delta: metric.delta,
+          event_timestamp: new Date().toISOString(),
+          non_interaction: true
+        });
+      }
+    }
+
+    // Largest Contentful Paint (LCP)
+    if ('PerformanceObserver' in window) {
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          sendWebVital({
+            name: 'LCP',
+            value: lastEntry.renderTime || lastEntry.loadTime,
+            delta: lastEntry.renderTime || lastEntry.loadTime,
+            id: `v1-${Date.now()}-${Math.random()}`
+          });
+        });
+        lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+      } catch (e) {
+        console.error('LCP observer error:', e);
+      }
+
+      // First Input Delay (FID)
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            sendWebVital({
+              name: 'FID',
+              value: entry.processingStart - entry.startTime,
+              delta: entry.processingStart - entry.startTime,
+              id: `v1-${Date.now()}-${Math.random()}`
+            });
+          });
+        });
+        fidObserver.observe({ type: 'first-input', buffered: true });
+      } catch (e) {
+        console.error('FID observer error:', e);
+      }
+
+      // Cumulative Layout Shift (CLS)
+      try {
+        let clsValue = 0;
+        let clsEntries = [];
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+              clsEntries.push(entry);
+            }
+          }
+        });
+        clsObserver.observe({ type: 'layout-shift', buffered: true });
+
+        // Send CLS on page hide
+        addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') {
+            sendWebVital({
+              name: 'CLS',
+              value: clsValue,
+              delta: clsValue,
+              id: `v1-${Date.now()}-${Math.random()}`
+            });
+          }
+        });
+      } catch (e) {
+        console.error('CLS observer error:', e);
+      }
+
+      // Time to First Byte (TTFB)
+      window.addEventListener('load', () => {
+        const navTiming = performance.getEntriesByType('navigation')[0];
+        if (navTiming) {
+          sendWebVital({
+            name: 'TTFB',
+            value: navTiming.responseStart - navTiming.requestStart,
+            delta: navTiming.responseStart - navTiming.requestStart,
+            id: `v1-${Date.now()}-${Math.random()}`
+          });
+        }
+      });
+    }
+  </script>
+
+  <!-- Google Analytics Scroll Depth Tracking -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const scrollDepths = [25, 50, 75, 100];
+      const triggeredDepths = new Set();
+
+      function trackScrollDepth() {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = window.scrollY;
+        const scrollPercent = (scrolled / scrollHeight) * 100;
+
+        scrollDepths.forEach(depth => {
+          if (scrollPercent >= depth && !triggeredDepths.has(depth)) {
+            triggeredDepths.add(depth);
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'scroll_depth', {
+                scroll_percentage: depth,
+                page_location: window.location.href,
+                event_timestamp: new Date().toISOString()
+              });
+            }
+          }
+        });
+      }
+
+      // Throttle scroll events for performance
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+        if (scrollTimeout) {
+          clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(trackScrollDepth, 100);
+      }, { passive: true });
+    });
+  </script>
+
   <!-- Google Analytics Click Tracking -->
   <script>
     // Resume download function
@@ -1163,6 +1305,23 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      // Track navigation link clicks
+      const navLinks = document.querySelectorAll('.nav-links a, .menu-links a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          const destination = this.getAttribute('href');
+          const linkText = this.textContent.trim();
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'navigation_click', {
+              link_destination: destination,
+              link_text: linkText,
+              link_type: 'navigation',
+              event_timestamp: new Date().toISOString()
+            });
+          }
+        });
+      });
+
       // Track resume download
       const resumeBtn = document.querySelector('button[onclick*="Resume.pdf"]');
       if (resumeBtn) {
@@ -1239,6 +1398,53 @@
             });
           }
         }
+      });
+
+      // Track project card flips (Explore button clicks)
+      const flipButtons = document.querySelectorAll('.flip-btn');
+      flipButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const projectCard = this.closest('.flip-card');
+          const projectTitle = projectCard.querySelector('.project-title')?.textContent.trim() || 'Unknown Project';
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'project_explore', {
+              project_name: projectTitle,
+              interaction_type: 'card_flip',
+              event_timestamp: new Date().toISOString()
+            });
+          }
+        });
+      });
+
+      // Track theme toggle clicks
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+          const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'theme_change', {
+              theme_selected: newTheme,
+              event_timestamp: new Date().toISOString()
+            });
+          }
+        });
+      }
+
+      // Track expand/collapse buttons
+      const expandButtons = document.querySelectorAll('.expand-skills-btn, .expand-experience-btn, .expand-projects-btn');
+      expandButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const sectionType = this.classList.contains('expand-skills-btn') ? 'skills' :
+                             this.classList.contains('expand-experience-btn') ? 'experience' : 'projects';
+          const isExpanding = this.querySelector('span').textContent.includes('Expand');
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'section_expand', {
+              section_name: sectionType,
+              action: isExpanding ? 'expand' : 'collapse',
+              event_timestamp: new Date().toISOString()
+            });
+          }
+        });
       });
     });
   </script>
