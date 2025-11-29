@@ -1,0 +1,108 @@
+/* Unified hover effects for all interactive elements */
+
+/* Base shadow for all hoverable elements */
+.btn-color-1,
+.details-container,
+.project-container,
+.about-pic,
+.contact-form-container,
+.flip-card {
+  box-shadow: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+}
+
+/* Add border to project buttons */
+.btn-color-2 {
+  box-shadow: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 2px solid #000 !important;
+  border-radius: 40px !important;
+}
+
+/* Add border to expand buttons in light mode */
+.expand-projects-btn,
+.expand-skills-btn,
+.expand-experience-btn {
+  box-shadow: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 2px solid #000 !important;
+  border-radius: 40px !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+/* Consistent hover effects for all elements */
+.btn-color-1:hover,
+.btn-color-2:hover,
+.details-container:hover,
+.project-container:hover,
+.about-pic:hover,
+.expand-projects-btn:hover,
+.expand-skills-btn:hover,
+.expand-experience-btn:hover,
+.contact-form-container:hover,
+.flip-card:hover {
+  transform: translateY(-10px) scale(1.03) !important;
+  box-shadow: 0 15px 30px rgba(150, 120, 255, 0.4) !important;
+}
+
+/* Expand buttons specific hover styles */
+.expand-projects-btn:hover,
+.expand-skills-btn:hover,
+.expand-experience-btn:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Arrow color on hover */
+.expand-projects-btn:hover .expand-arrow,
+.expand-skills-btn:hover .expand-arrow,
+.expand-experience-btn:hover .expand-arrow {
+  color: #ffffff !important;
+}
+
+/* Dark mode hover styles */
+.dark-theme .btn-color-1:hover,
+.dark-theme .btn-color-2:hover,
+.dark-theme .details-container:hover,
+.dark-theme .project-container:hover,
+.dark-theme .about-pic:hover,
+.dark-theme .expand-projects-btn:hover,
+.dark-theme .expand-skills-btn:hover,
+.dark-theme .expand-experience-btn:hover,
+.dark-theme .contact-form-container:hover,
+.dark-theme .flip-card:hover {
+  transform: translateY(-10px) scale(1.03) !important;
+  box-shadow: 0 15px 30px rgba(170, 140, 255, 0.45) !important;
+}
+
+/* Dark mode expand buttons styling */
+.dark-theme .expand-projects-btn,
+.dark-theme .expand-skills-btn,
+.dark-theme .expand-experience-btn {
+  border: 2px solid #fff !important;
+}
+
+/* Dark mode expand buttons specific hover styles */
+.dark-theme .expand-projects-btn:hover,
+.dark-theme .expand-skills-btn:hover,
+.dark-theme .expand-experience-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Dark mode arrow color on hover */
+.dark-theme .expand-projects-btn:hover .expand-arrow,
+.dark-theme .expand-skills-btn:hover .expand-arrow,
+.dark-theme .expand-experience-btn:hover .expand-arrow {
+  color: #000000 !important;
+}
+
+/* Project image hover effect - pop up */
+.project-img {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.flip-card-front:hover .project-img {
+  transform: translateY(-8px) scale(1.05) !important;
+}

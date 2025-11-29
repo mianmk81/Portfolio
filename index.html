@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="description" content="Mubashar Mian - Computer Science student specializing in AI, ML, and full-stack development" />
+  <title>Mubashar Mian - Portfolio</title>
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="custom.css" />
+  <link rel="stylesheet" href="unified-transitions.css" />
+  <link rel="stylesheet" href="button-hover.css" />
+  <link rel="stylesheet" href="enhancements.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW7RTRK39J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BW7RTRK39J');
+  </script>
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+  <div id="progress-bar"></div>
+
+  <!-- Bubble background container - optimized for performance -->
+  <div class="bubble-container">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  <nav id="desktop-nav">
+    <div class="logo">Mubashar Mian</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Mubashar Mian</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+    <div id="profile-pic" class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Mubashar Mian profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title" id="typing-name"><span id="typed-text"></span><span class="typing-cursor">|</span></h1>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="downloadResume()">
+          Download Resume
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/mubashar-mian/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/mianmk81'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p><span class="counter" data-target="3">0</span>+ year</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>M.S. Computer Science (Current)<br>B.S. Computer Science</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Hey! I'm Mubashar Mian — a Computer Science student at Georgia State University with a deep passion for AI,
+            backend systems, and building real-world solutions that make an impact.
+            Whether it's designing scalable APIs, working on AI-powered apps, or experimenting with computer vision, I
+            love turning ideas into products.
+            Outside of tech, I'm into Badminton, thoughtful Pool, and anything that helps me grow a little every day. My
+            goal is simple: keep building, keep learning, and use technology to solve meaningful problems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Review My </p>
+    <h1 class="title">Work Experience</h1>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">Southern Company</span>
+            <span class="date-badge">TBA – TBA</span>
+          </div>
+          <div class="role">Technology and Innovations Intern</div>
+          <ul class="desc">
+            <li>Incoming technology and Innovations intern @ Southern Company</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">Intuit</span>
+            <span class="date-badge">May 2025 – August 2025</span>
+          </div>
+          <div class="role">AI Science - Intern</div>
+          <ul class="desc">
+            <li>Designed and deployed scalable SQL pipelines on BigQuery to curate training, calibration, and scoring
+              datasets on customer records, optimizing inputs for Customer Success propensity modeling.</li>
+            <li>Trained and evaluated XGBoost model, achieving an AUC of 0.82, improving recall by 47x and boosting
+              score reliability by 20% via calibration with separate holdout sets. Deployed the model to production for
+              daily scoring of all customers</li>
+            <li>Built and orchestrated Apache Airflow DAGs to automate the end-to-end data flow — from generating
+              training/calibration/scoring cohorts to running daily production scoring — enabling hands-free integration
+              within the Customer Success pipeline and ensuring continuous production performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-container hidden" id="expandable-experience">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">Griffin &amp; Strong, P.C.</span>
+            <span class="date-badge">Aug 2024 – Nov 2025</span>
+          </div>
+          <div class="role">Data Analyst - Intern</div>
+          <ul class="desc">
+            <li>Streamlined data processing using Python, SQL, increasing data accuracy by 13% and enabling reliable,
+              insight-driven reporting.</li>
+            <li>Communicated findings effectively by creating visualizations and statistical reports for internal teams
+              and external stakeholders, increasing stakeholder engagement by 15%.</li>
+            <li>Applied statistical techniques and machine learning methods to interpret and analyze complex data sets,
+              identifying key trends to support data-driven decisions.</li>
+            <li>Collaborated cross-functionally to manage and clean databases, optimizing data accuracy and efficiency
+              by over 20% through automation with Python and SQL.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">Knack Tutoring</span>
+            <span class="date-badge">Aug 2025 – Dec 2025</span>
+          </div>
+          <div class="role">Computer Science Tutor</div>
+          <ul class="desc">
+            <li>Provided tutoring support across CS courses from introductory programming through graduate-level Machine
+              Learning, strengthening student skills in coding, algorithmic thinking, and data analysis.</li>
+            <li>Delivered customized 1:1 and group sessions in Python, Java, SQL, Data Structures, Design & Analysis of
+              Algorithms, Machine Learning, Data Mining, Database Systems, and Software Development, simplifying complex
+              concepts to improve student performance.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Example moved timeline-item (move oldest one for demo)-->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">DC Green Construction</span>
+            <span class="date-badge">Feb 2025 – March 2025</span>
+          </div>
+          <div class="role">Generative AI Graphic - Intern</div>
+          <ul class="desc">
+            <li>Utilized existing AI platforms to create engaging comic books, effectively communicating company
+              policies and enhancing public understanding by 20%.</li>
+            <li>Managed, updated, and optimized company website content, ensuring accurate and timely information
+              delivery, resulting in improved user experience and increased web traffic.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">Resilience, Inc</span>
+            <span class="date-badge">March 2024 – July 2024</span>
+          </div>
+          <div class="role">Web Development Project Manager - Intern</div>
+          <ul class="desc">
+            <li>Managed web properties by troubleshooting technical issues, updating plugins, and integrating new
+              functionalities, leading to a 20% improvement in website performance.</li>
+            <li>Directed IT projects promoting social-emotional curriculum, implemented AI-driven comic books to
+              effectively communicate company policies to the public, resulting in increased audience engagement by 15%.
+            </li>
+            <li>Coordinated website enhancements based on customer feedback, conducted QA testing, and optimized site
+              performance, improving user satisfaction by 20%.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="company">Freelance Developer</span>
+            <span class="date-badge">May 2022 – Feb 2024</span>
+          </div>
+          <div class="role">Independent Projects</div>
+          <ul class="desc">
+            <li>Designed and implemented interactive Python applications including a text-based adventure game, snake
+              game, and tic-tac-toe with AI using object-oriented programming principles and file handling for dialogue
+              and game state persistence.</li>
+            <li>Developed several utility-based mini projects including a trivia quiz app, thermometer simulation, dice
+              roller, and an appointment form GUI, reinforcing understanding of sensors, file I/O, and basic UI design.
+            </li>
+            <li>Utilized Python modules such as turtle, json, and custom class hierarchies to build games and
+              simulations, emphasizing foundational programming, algorithmic logic, and early-stage project structuring.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="expand-experience-row">
+      <button class="expand-experience-btn">
+        <i class="fas fa-angle-down expand-arrow" id="experience-arrow"></i>
+        <span id="experience-btn-label">Expand Experience</span>
+      </button>
+    </div>
+  </section>
+  <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Technical Skills</h1>
+    <div class="skills-details-container">
+      <div class="about-containers">
+        <!-- Languages -->
+        <div class="details-container">
+          <h2 class="skills-sub-title">Languages</h2>
+          <div class="article-container">
+            <article><i class="fab fa-python skill-icon"></i>
+              <div>
+                <h3>Python</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>TypeScript</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-js skill-icon"></i>
+              <div>
+                <h3>JavaScript</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-php skill-icon"></i>
+              <div>
+                <h3>PHP</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-html5 skill-icon"></i>
+              <div>
+                <h3>HTML/CSS</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>C</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-java skill-icon"></i>
+              <div>
+                <h3>Java</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-database skill-icon"></i>
+              <div>
+                <h3>MySQL</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-android skill-icon"></i>
+              <div>
+                <h3>Kotlin</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- AI/ML Tools & Data Science -->
+        <div class="details-container">
+          <h2 class="skills-sub-title">AI/ML Tools & Data Science</h2>
+          <div class="article-container">
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>TensorFlow</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-brain skill-icon"></i>
+              <div>
+                <h3>PyTorch</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-chart-bar skill-icon"></i>
+              <div>
+                <h3>Pandas</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-superscript skill-icon"></i>
+              <div>
+                <h3>NumPy</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-chart-bar skill-icon"></i>
+              <div>
+                <h3>Matplotlib</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-project-diagram skill-icon"></i>
+              <div>
+                <h3>Scikit-Learn</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-brain skill-icon"></i>
+              <div>
+                <h3>Dlib</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-brain skill-icon"></i>
+              <div>
+                <h3>MediaPipe</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-eye skill-icon"></i>
+              <div>
+                <h3>OpenCV</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-eye skill-icon"></i>
+              <div>
+                <h3>Tesseract OCR</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-robot skill-icon"></i>
+              <div>
+                <h3>EfficientNet</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-cloud skill-icon"></i>
+              <div>
+                <h3>Google Gen AI</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- Frameworks -->
+        <div class="details-container">
+          <h2 class="skills-sub-title">Frameworks</h2>
+          <div class="article-container">
+            <article><i class="fab fa-react skill-icon"></i>
+              <div>
+                <h3>React</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-node-js skill-icon"></i>
+              <div>
+                <h3>Node.js</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-flask skill-icon"></i>
+              <div>
+                <h3>Flask</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-bolt skill-icon"></i>
+              <div>
+                <h3>FastAPI</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-react skill-icon"></i>
+              <div>
+                <h3>React Native</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-react skill-icon"></i>
+              <div>
+                <h3>Expo</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-react skill-icon"></i>
+              <div>
+                <h3>Next.js</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-css3-alt skill-icon"></i>
+              <div>
+                <h3>Tailwind CSS</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div> <!-- close about-containers -->
+      <div class="about-containers hidden" id="expandable-skills">
+        <!-- Libraries / APIs -->
+        <!-- Libraries / APIs -->
+        <div class="details-container">
+          <h2 class="skills-sub-title">Libraries / APIs</h2>
+          <div class="article-container">
+            <article><i class="fas fa-table skill-icon"></i>
+              <div>
+                <h3>Pandas</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-superscript skill-icon"></i>
+              <div>
+                <h3>NumPy</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-chart-bar skill-icon"></i>
+              <div>
+                <h3>Matplotlib</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-window-maximize skill-icon"></i>
+              <div>
+                <h3>Tkinter</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>JSON</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-exchange-alt skill-icon"></i>
+              <div>
+                <h3>WebSockets</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-google skill-icon"></i>
+              <div>
+                <h3>Google Translate API</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-google skill-icon"></i>
+              <div>
+                <h3>Google Places API</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-spotify skill-icon"></i>
+              <div>
+                <h3>Spotify API</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-calendar skill-icon"></i>
+              <div>
+                <h3>Eventbrite API</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- Developer Tools -->
+        <div class="details-container">
+          <h2 class="skills-sub-title">Developer Tools</h2>
+          <div class="article-container">
+            <article><i class="fab fa-git-alt skill-icon"></i>
+              <div>
+                <h3>Git</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-github skill-icon"></i>
+              <div>
+                <h3>GitHub</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>VS Code</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>PyCharm</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-code skill-icon"></i>
+              <div>
+                <h3>Visual Studio</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-book skill-icon"></i>
+              <div>
+                <h3>Jupyter Notebooks</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-fire skill-icon"></i>
+              <div>
+                <h3>Firebase</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-database skill-icon"></i>
+              <div>
+                <h3>Supabase</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-figma skill-icon"></i>
+              <div>
+                <h3>Figma</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-database skill-icon"></i>
+              <div>
+                <h3>DBeaver</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-video skill-icon"></i>
+              <div>
+                <h3>Lens Studio</h3>
+              </div>
+            </article>
+            <article><i class="fab fa-google skill-icon"></i>
+              <div>
+                <h3>Google Cloud</h3>
+              </div>
+            </article>
+            <article><i class="fas fa-glasses skill-icon"></i>
+              <div>
+                <h3>Snap Spectacles</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="expand-skills-row">
+        <button class="expand-skills-btn">
+          <i class="fas fa-angle-down expand-arrow" id="skills-arrow"></i>
+          <span id="skills-btn-label">Expand Skills</span>
+        </button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Persistent Floating Arrow Icons -->
+  <div class="floating-arrow-up" id="floatingArrowUp">
+    <img src="./assets/arrow.png" alt="Arrow up icon" />
+  </div>
+  <div class="floating-arrow" id="floatingArrow">
+    <img src="./assets/arrow.png" alt="Arrow down icon" />
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <div id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <script>
+    // Scroll to next section when clicking the floating arrow
+    const arrow = document.getElementById('floatingArrow');
+    arrow.addEventListener('click', function () {
+      const sections = Array.from(document.querySelectorAll('section'));
+      const currentScroll = window.scrollY;
+      const nextSection = sections.find(sec => sec.offsetTop > currentScroll + 10);
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    // Scroll to previous section when clicking the floating up arrow
+    const arrowUp = document.getElementById('floatingArrowUp');
+    arrowUp.addEventListener('click', function () {
+      const sections = Array.from(document.querySelectorAll('section'));
+      const currentScroll = window.scrollY;
+      // Find the previous section above current scroll
+      let prevSection = null;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].offsetTop < currentScroll - 10) {
+          prevSection = sections[i];
+          break;
+        }
+      }
+      if (prevSection) {
+        prevSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="projects-container">
+
+      <!-- 1. MODELMAESTRO -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/ModelMaestro.png" alt="ModelMaestro Project" class="project-img" />
+            </div>
+            <h2 class="project-title">ModelMaestro</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>ModelMaestro</h2>
+            <p>A no-code model-building tool where users upload a CSV and enter a prompt—ModelMaestro automatically
+              cleans the data, selects the best algorithm, trains the model, and returns a downloadable trained model
+              file.</p>
+            <div class="tech-stack">
+              <span>Scikit-learn</span>
+              <span>XGBoost</span>
+              <span>TensorFlow</span>
+              <span>AutoML</span>
+              <span>Gemini</span>
+              <span>GCP</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/ModelMaestro', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. FRAME FLOW -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/FrameFlow.png" alt="Frame Flow Project" class="project-img" />
+            </div>
+            <h2 class="project-title">Frame Flow</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>Frame Flow</h2>
+            <p>A real-time dance coaching platform that tracks human motion and compares it to reference choreography
+              with 92% accuracy. Features frame-by-frame analysis and corrective feedback that improves user performance
+              by 70%.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>MediaPipe</span>
+              <span>OpenPose</span>
+              <span>OpenCV</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/FrameFlow', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. NEURACITY -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/NeuraCity.png" alt="NeuraCity Project" class="project-img" />
+            </div>
+            <h2 class="project-title">NeuraCity</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>NeuraCity</h2>
+            <p>An intelligent city mirror that can see, hear, and feel what's happening in every corner. Neuracity
+              senses traffic flow, community movement, and emerging issues in real time—then transforms them into clear
+              insights anyone can understand. It's the AI heartbeat of the city, revealing what's working, what's
+              broken, and what needs attention before anyone even asks.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Tailwind CSS</span>
+              <span>Vite</span>
+              <span>Supabase</span>
+              <span>Gemini API</span>
+              <span>Mapbox GL</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/NeuraCity', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="projects-container hidden" id="expandable-projects">
+
+      <!-- 4. ASL TRANSLATION SYSTEM -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/ASL.png" alt="ASL Translation System Project" class="project-img" />
+            </div>
+            <h2 class="project-title">ASL Translation System</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>ASL Translation System</h2>
+            <p>A real-time American Sign Language translation application with 95% accuracy using TensorFlow and
+              MediaPipe. Features a scalable WebSocket architecture processing 1,000+ frames per minute between React
+              frontend and Python backend.</p>
+            <div class="tech-stack">
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>MediaPipe</span>
+              <span>WebSockets</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/ASL_Translator', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. LOVELINK -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/Love-link.png" alt="Lovelink Project" class="project-img" />
+            </div>
+            <h2 class="project-title">Lovelink</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>Lovelink</h2>
+            <p>A mobile-first relationship app for long-distance couples featuring AI-enhanced messaging and
+              collaborative planning tools. Utilizes Gemini API for personalized recommendations and Firebase for
+              real-time syncing across time zones.</p>
+            <div class="tech-stack">
+              <span>React Native</span>
+              <span>FastAPI</span>
+              <span>Firebase</span>
+              <span>Gemini API</span>
+              <span>Expo</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/Lovelink', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. CAREMATE -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/Caremate.png" alt="CareMate Project" class="project-img" />
+            </div>
+            <h2 class="project-title">CareMate</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>CareMate</h2>
+            <p>An Android app that identifies risky medication or food interactions by reading prescriptions and dietary
+              labels using OCR. Integrates with Gemini API for context-aware analysis based on user's medical conditions
+              and current medications.</p>
+            <div class="tech-stack">
+              <span>Kotlin</span>
+              <span>FastAPI</span>
+              <span>Tesseract OCR</span>
+              <span>Gemini API</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/Caremate', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. TINY TASKS -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/Tiny-Tasks.png" alt="Tiny Tasks Project" class="project-img" />
+            </div>
+            <h2 class="project-title">Tiny Tasks</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>Tiny Tasks</h2>
+            <p>A task management app that uses AI to break down tasks into manageable subtasks, specifically designed
+              for ADHD users. Integrates with Google Calendar for real-time synchronization and uses behavioral learning
+              to dynamically prioritize tasks.</p>
+            <div class="tech-stack">
+              <span>React Native</span>
+              <span>FastAPI</span>
+              <span>Flask</span>
+              <span>Google CalDAV API</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/TinyTask', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. EYECAN -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/EyeCan.png" alt="Eye-Controlled Cursor Project" class="project-img" />
+            </div>
+            <h2 class="project-title">EyeCan</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>Eye-Controlled Cursor</h2>
+            <p>An accessibility application enabling hands-free desktop navigation through webcam-based eye tracking and
+              gesture mapping. Features enhanced detection accuracy through facial calibration and custom thresholding
+              for users with motor impairments.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>Dlib</span>
+              <span>Facial Landmark Detection</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/EyeCan', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. CALMLENS -->
+      <div class="project-container color-container flip-card">
+        <div class="flip-card-inner">
+          <!-- Front of card -->
+          <div class="flip-card-front">
+            <div class="project-pic">
+              <img src="./assets/Calmlens.png" alt="Calmlens Project" class="project-img" />
+            </div>
+            <h2 class="project-title">Calmlens</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn flip-btn">
+                Explore
+              </button>
+            </div>
+          </div>
+          <!-- Back of card -->
+          <div class="flip-card-back">
+            <h2>Calmlens (Snap)</h2>
+            <p>An augmented reality lens for Snap Spectacles that anonymizes individuals with real-time facial blurring
+              and interactive controls. Optimized for mobile hardware with multi-pass rendering techniques achieving 30+
+              FPS.</p>
+            <div class="tech-stack">
+              <span>Lens Studio</span>
+              <span>JavaScript</span>
+              <span>AR</span>
+              <span>Snap Spectacles</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/mianmk81/Calmlens', '_blank')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="expand-projects-row">
+      <button class="expand-projects-btn">
+        <i class="fas fa-angle-down expand-arrow" id="projects-arrow"></i>
+        <span id="projects-btn-label">Expand Projects</span>
+      </button>
+    </div>
+    </div>
+
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:examplemail@gmail.com">mianmk81@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/mubashar-mian/">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/phone.png" alt="phone icon" class="icon contact-icon phone-icon" />
+        <p>+1 (470) 301-1134</p>
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <h2 class="form-title">Send Me a Message</h2>
+      <p class="form-subtitle">Have a question or want to work together? Drop me a line!</p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn btn-color-1">SUBMIT</button>
+        <div id="form-status" class="hidden"></div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+  <script src="project-expansion.js"></script>
+  <script src="magnetic-effect.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow.js/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script>
+    // Skills Section Expand/Collapse
+    const expandBtn = document.querySelector('.expand-skills-btn');
+    const expandable = document.getElementById('expandable-skills');
+    const skillsArrow = document.getElementById('skills-arrow');
+    const label = document.getElementById('skills-btn-label');
+    expandBtn.addEventListener('click', function () {
+      if (expandable.classList.contains('hidden')) {
+        expandable.classList.remove('hidden');
+        expandable.classList.add('expanded');
+        skillsArrow.classList.remove('fa-angle-down');
+        skillsArrow.classList.add('fa-angle-up');
+        skillsArrow.style.marginTop = '0';
+        skillsArrow.style.marginBottom = '0.2em';
+        label.textContent = 'Collapse Skills';
+      } else {
+        expandable.classList.remove('expanded');
+        expandable.classList.add('hidden');
+        skillsArrow.classList.remove('fa-angle-up');
+        skillsArrow.classList.add('fa-angle-down');
+        skillsArrow.style.marginBottom = '0';
+        skillsArrow.style.marginTop = '0.2em';
+        label.textContent = 'Expand Skills';
+      }
+    });
+
+    // Projects expansion is now handled by project-expansion.js
+    // Start collapsed
+    const expandableProjects = document.getElementById('expandable-projects');
+    if (expandableProjects) {
+      expandableProjects.classList.remove('expanded');
+      expandableProjects.classList.add('hidden');
+    }
+  </script>
+  <!-- Google Analytics Section Tracking -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      let currentSection = null;
+      let sectionEnterTime = null;
+
+      function sendTimeEvent(sectionId, msSpent) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'section_time', {
+            section_id: sectionId,
+            time_ms: msSpent
+          });
+        }
+      }
+
+      function sendViewEvent(sectionId) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'section_view', {
+            section_id: sectionId,
+            event_timestamp: new Date().toISOString()
+          });
+        }
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const newId = entry.target.id || "unknown";
+            const now = Date.now();
+
+            // Track time spent in previous section
+            if (currentSection && sectionEnterTime) {
+              const spent = now - sectionEnterTime;
+              sendTimeEvent(currentSection, spent);
+            }
+
+            // Track view of new section
+            sendViewEvent(newId);
+
+            // Update current section
+            currentSection = newId;
+            sectionEnterTime = now;
+          }
+        });
+      }, { threshold: 0.6 });
+
+      // Observe all sections
+      sections.forEach(sec => observer.observe(sec));
+
+      // Track final section time on page unload
+      window.addEventListener("beforeunload", () => {
+        if (currentSection && sectionEnterTime) {
+          const spent = Date.now() - sectionEnterTime;
+          sendTimeEvent(currentSection, spent);
+        }
+      });
+    });
+  </script>
+
+  <!-- Google Analytics Click Tracking -->
+  <script>
+    // Resume download function
+    function downloadResume() {
+      // Track the download event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'file_download', {
+          file_name: 'Resume.pdf',
+          link_url: 'Resume.pdf',
+          link_text: 'Download Resume'
+        });
+      }
+
+      // Force download instead of opening in new tab
+      const link = document.createElement('a');
+      link.href = 'Resume.pdf';
+      link.download = 'Mubashar_Mian_Resume.pdf'; // Suggested filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Track resume download
+      const resumeBtn = document.querySelector('button[onclick*="Resume.pdf"]');
+      if (resumeBtn) {
+        resumeBtn.addEventListener('click', function () {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'file_download', {
+              file_name: 'Resume.pdf',
+              link_url: 'Resume.pdf',
+              link_text: 'Download Resume'
+            });
+          }
+        });
+      }
+
+      // Track LinkedIn clicks (both icon and link)
+      const linkedinLinks = document.querySelectorAll('a[href*="linkedin.com"], [onclick*="linkedin.com"]');
+      linkedinLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'click', {
+              link_type: 'social',
+              link_destination: 'LinkedIn',
+              link_url: 'https://www.linkedin.com/in/mubashar-mian/'
+            });
+          }
+        });
+      });
+
+      // Track GitHub profile clicks
+      const githubProfileLinks = document.querySelectorAll('a[href*="github.com/mianmk81"], [onclick*="github.com/mianmk81"]');
+      githubProfileLinks.forEach(link => {
+        const url = link.href || link.getAttribute('onclick')?.match(/github\.com\/mianmk81[^'"]*/)?.[0] || 'https://github.com/mianmk81';
+        link.addEventListener('click', function () {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'click', {
+              link_type: 'social',
+              link_destination: 'GitHub Profile',
+              link_url: url
+            });
+          }
+        });
+      });
+
+      // Track project GitHub links
+      const projectGithubLinks = document.querySelectorAll('button[onclick*="github.com"]');
+      projectGithubLinks.forEach(btn => {
+        const onclickAttr = btn.getAttribute('onclick');
+        const githubMatch = onclickAttr?.match(/github\.com\/[^'"]*/);
+        if (githubMatch) {
+          const repoUrl = 'https://' + githubMatch[0];
+          const repoName = githubMatch[0].split('/').pop();
+          btn.addEventListener('click', function () {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                link_type: 'project',
+                link_destination: 'GitHub Repository',
+                link_url: repoUrl,
+                project_name: repoName
+              });
+            }
+          });
+        }
+      });
+
+      // Track all external links (optional - catches any other outbound links)
+      document.addEventListener('click', function (e) {
+        const link = e.target.closest('a');
+        if (link && link.href && !link.href.startsWith(window.location.origin) && !link.href.startsWith('#')) {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'click', {
+              link_type: 'external',
+              link_url: link.href,
+              link_text: link.textContent.trim()
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

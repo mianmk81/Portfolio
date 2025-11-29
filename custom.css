@@ -1,0 +1,338 @@
+/* Custom styles to reduce the size of ONLY the education and experience boxes */
+
+/* Target ONLY the details-container elements in the about section */
+#about .about-containers .details-container {
+  padding: 1.2rem 1.5rem;
+  min-width: 375px;
+  max-width: 470px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust spacing between boxes in the about section only */
+#about .about-containers {
+  gap: 1.5rem;
+}
+
+/* Make sure text fits nicely in the smaller boxes in the about section */
+#about .about-containers .details-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+#about .about-containers .details-container p {
+  font-size: 1.35rem;
+}
+
+/* Update styles for the skills section to remove borders */
+#skills .details-container {
+  min-width: 300px;
+  max-width: 450px;
+  padding: 2rem;
+  border: none; /* Remove border */
+  box-shadow: 0 8px 16px rgba(100, 100, 255, 0.2) !important; /* Match blue bubble color */
+}
+
+/* Update experience section to match skills section shadow */
+#experience .details-container {
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 8px 16px rgba(100, 100, 255, 0.2) !important; /* Match skills section shadow */
+  transition: all 0.3s ease;
+}
+
+#experience .details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(100, 100, 255, 0.3) !important;
+}
+
+/* Fix the icons in the about section */
+#about .about-containers .details-container .icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Bubble background for the entire webpage */
+body {
+  position: relative;
+}
+
+/* Create bubble container that spans the entire page */
+.bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Create individual bubbles with CSS */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(100, 100, 255, 0.15);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(100, 100, 255, 0.3);
+  z-index: -1;
+  backdrop-filter: blur(1px);
+  /* Different animation speeds for more dynamic movement */
+  animation-name: float-bubble;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite;
+}
+
+/* Optimized bubbles - reduced to 12 for better performance */
+.bubble:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  left: 10%;
+  top: 20%;
+  animation-duration: 8s;
+  opacity: 0.25;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  left: 25%;
+  top: 60%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+  opacity: 0.2;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(3) {
+  width: 35px;
+  height: 35px;
+  left: 40%;
+  top: 35%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  opacity: 0.3;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(4) {
+  width: 90px;
+  height: 90px;
+  left: 55%;
+  top: 75%;
+  animation-duration: 15s;
+  animation-delay: 3s;
+  opacity: 0.18;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  left: 70%;
+  top: 25%;
+  animation-duration: 9s;
+  animation-delay: 1.5s;
+  opacity: 0.28;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(6) {
+  width: 65px;
+  height: 65px;
+  left: 85%;
+  top: 50%;
+  animation-duration: 11s;
+  animation-delay: 2.5s;
+  opacity: 0.22;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(7) {
+  width: 45px;
+  height: 45px;
+  left: 15%;
+  top: 80%;
+  animation-duration: 10s;
+  animation-delay: 0.5s;
+  opacity: 0.26;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(8) {
+  width: 80px;
+  height: 80px;
+  left: 30%;
+  top: 10%;
+  animation-duration: 13s;
+  animation-delay: 1.8s;
+  opacity: 0.2;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(9) {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  top: 45%;
+  animation-duration: 8s;
+  animation-delay: 0.8s;
+  opacity: 0.32;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(10) {
+  width: 75px;
+  height: 75px;
+  left: 45%;
+  top: 90%;
+  animation-duration: 14s;
+  animation-delay: 2.2s;
+  opacity: 0.19;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(11) {
+  width: 55px;
+  height: 55px;
+  left: 90%;
+  top: 15%;
+  animation-duration: 11s;
+  animation-delay: 1.2s;
+  opacity: 0.24;
+  will-change: transform, opacity;
+}
+
+.bubble:nth-child(12) {
+  width: 38px;
+  height: 38px;
+  left: 78%;
+  top: 65%;
+  animation-duration: 9s;
+  animation-delay: 1.6s;
+  opacity: 0.27;
+  will-change: transform, opacity;
+}
+
+/* Animation for floating bubbles */
+@keyframes float-bubble {
+  0% {
+    transform: translateY(120vh) scale(0.5);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) scale(0.8) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-20vh) scale(1) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+/* Dark theme adjustments for bubbles */
+.dark-theme .bubble {
+  background: rgba(100, 150, 255, 0.1);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(100, 150, 255, 0.2);
+}
+
+/* Project section styles */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 0; /* Reduced margin to eliminate gap */
+}
+
+/* When projects are expanded, make them display consecutively */
+#expandable-projects {
+  margin-top: 2rem; /* Add consistent spacing */
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Remove the hidden class to make the expandable projects visible */
+#expandable-projects.hidden {
+  display: none;
+}
+
+/* Remove the expanded class to ensure proper display */
+#expandable-projects.expanded {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Make sure there's no gap when projects are expanded */
+.expand-projects-row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the expand button */
+.expand-projects-btn {
+  background: transparent;
+  border: 2px solid #555;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.expand-projects-btn:hover {
+  background: #f0f0f0;
+}
+
+.dark-theme .expand-projects-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.dark-theme .expand-projects-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #121212;
+}
+
+/* Smooth transition for the arrow */
+.expand-arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Fix for tablets and mobile to ensure consecutive display */
+@media screen and (max-width: 1200px) {
+  .projects-container, 
+  #expandable-projects.expanded {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  /* Ensure no gap between containers on tablet */
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #expandable-projects {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-container,
+  #expandable-projects.expanded {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

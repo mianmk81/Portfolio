@@ -1,0 +1,336 @@
+/* Creative Professional Enhancements */
+
+/* Gradient text effect for title */
+#typing-name {
+  background: linear-gradient(135deg, rgb(100, 100, 255), rgb(150, 100, 255), rgb(100, 150, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dark-theme #typing-name {
+  background: linear-gradient(135deg, rgb(130, 150, 255), rgb(180, 130, 255), rgb(130, 180, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+}
+
+/* Subtle glow effect on hover for project cards */
+.flip-card:hover {
+  animation: subtle-glow 2s ease-in-out infinite;
+}
+
+@keyframes subtle-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(100, 100, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(100, 100, 255, 0.5));
+  }
+}
+
+/* Improved button hover with gradient */
+.btn-color-1,
+.btn-color-2 {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-color-1::before,
+.btn-color-2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100, 100, 255, 0.3), transparent);
+  transition: width 0.6s ease, height 0.6s ease;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn-color-1:hover::before,
+.btn-color-2:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Smooth scale animation for icons */
+.icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Enhanced timeline items with better visual hierarchy */
+.timeline-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(100, 100, 255), rgb(150, 100, 255));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover::before {
+  transform: scaleY(1);
+}
+
+/* Improved scroll progress bar with gradient */
+#progress-bar {
+  background: linear-gradient(to right, rgb(100, 100, 255), rgb(150, 100, 255), rgb(100, 150, 255));
+  box-shadow: 0 0 10px rgba(100, 100, 255, 0.5);
+}
+
+/* Add smooth entrance animation for sections */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgb(100, 100, 255);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Improved loading screen */
+#loading-screen {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0ff 100%);
+}
+
+.dark-theme #loading-screen {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a3a 100%);
+}
+
+.loader {
+  border: 5px solid rgba(100, 100, 255, 0.1);
+  border-top: 5px solid rgb(100, 100, 255);
+  box-shadow: 0 0 20px rgba(100, 100, 255, 0.3);
+}
+
+/* Add subtle animation to skills icons */
+.skill-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+article:hover .skill-icon {
+  transform: scale(1.2) translateY(-3px);
+  filter: drop-shadow(0 5px 10px rgba(100, 100, 255, 0.3));
+}
+
+/* Enhanced contact form with better visual feedback */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtle pulse animation for floating arrows */
+.floating-arrow {
+  animation: float-pulse 3s ease-in-out infinite;
+}
+
+.floating-arrow-up {
+  animation: float-pulse-up 3s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes float-pulse {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05) rotate(0deg);
+  }
+}
+
+@keyframes float-pulse-up {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(180deg);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05) rotate(180deg);
+  }
+}
+
+/* Improved theme toggle with rotation */
+.theme-toggle {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95) rotate(180deg);
+}
+
+.theme-toggle i {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add depth to cards with better shadows */
+.details-container,
+.project-container,
+.timeline-item {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.details-container:hover,
+.project-container:hover,
+.timeline-item:hover {
+  box-shadow: 0 14px 28px rgba(100, 100, 255, 0.25), 0 10px 10px rgba(100, 100, 255, 0.22);
+}
+
+/* Gradient overlay on project images */
+.project-img {
+  position: relative;
+}
+
+.flip-card-front:hover .project-img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Improve text readability with subtle text shadow in dark mode */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Add smooth color transition for all interactive elements */
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* Override transitions for animations */
+*[class*="animate"],
+*[style*="animation"] {
+  transition: none;
+}
+
+/* Performance optimization: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .bubble {
+    animation: none;
+    display: none;
+  }
+}
+
+/* Add glass morphism effect to navigation in dark mode */
+.dark-theme nav {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Improve expand buttons with better states */
+.expand-projects-btn,
+.expand-skills-btn,
+.expand-experience-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.expand-projects-btn::after,
+.expand-skills-btn::after,
+.expand-experience-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(100, 100, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.expand-projects-btn:hover::after,
+.expand-skills-btn:hover::after,
+.expand-experience-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Add shimmer effect to profile picture */
+.section__pic-container img {
+  position: relative;
+  overflow: hidden;
+}
+
+#profile-pic::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shimmer 8s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
