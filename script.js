@@ -95,11 +95,11 @@ function toggleExperience() {
   const btn = document.querySelector('.expand-experience-btn');
   if (expandable.classList.contains('hidden')) {
     expandable.classList.remove('hidden');
-    arrow.style.transform = 'rotate(180deg)';
+    arrow.classList.add('rotated');
     label.textContent = 'Collapse Experience';
   } else {
     expandable.classList.add('hidden');
-    arrow.style.transform = '';
+    arrow.classList.remove('rotated');
     label.textContent = 'Expand Experience';
   }
 }

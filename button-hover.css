@@ -2,13 +2,23 @@
 
 /* Base shadow for all hoverable elements */
 .btn-color-1,
-.details-container,
 .project-container,
-.about-pic,
 .contact-form-container,
 .flip-card {
   box-shadow: none !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+}
+
+/* details-container removed - using JavaScript proximity-based magnetic effect */
+.details-container {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* about-pic removed - using JavaScript proximity-based magnetic effect */
+.about-pic {
+  box-shadow: none !important;
   border: none !important;
 }
 
@@ -31,18 +41,26 @@
   padding: 0.5rem 1.5rem !important;
 }
 
-/* Consistent hover effects for all elements */
+/* Consistent hover effects for all elements - transforms removed for proximity magnetic effect */
 .btn-color-1:hover,
 .btn-color-2:hover,
-.details-container:hover,
 .project-container:hover,
-.about-pic:hover,
 .expand-projects-btn:hover,
 .expand-skills-btn:hover,
 .expand-experience-btn:hover,
 .contact-form-container:hover,
 .flip-card:hover {
-  transform: translateY(-10px) scale(1.03) !important;
+  /* transform removed - using JavaScript proximity-based magnetic effect */
+  box-shadow: 0 15px 30px rgba(150, 120, 255, 0.4) !important;
+}
+
+/* details-container removed - using JavaScript proximity-based magnetic effect */
+.details-container:hover {
+  box-shadow: 0 15px 30px rgba(150, 120, 255, 0.4) !important;
+}
+
+/* about-pic removed - using JavaScript proximity-based magnetic effect */
+.about-pic:hover {
   box-shadow: 0 15px 30px rgba(150, 120, 255, 0.4) !important;
 }
 
@@ -61,18 +79,26 @@
   color: #ffffff !important;
 }
 
-/* Dark mode hover styles */
+/* Dark mode hover styles - transforms removed for proximity magnetic effect */
 .dark-theme .btn-color-1:hover,
 .dark-theme .btn-color-2:hover,
-.dark-theme .details-container:hover,
 .dark-theme .project-container:hover,
-.dark-theme .about-pic:hover,
 .dark-theme .expand-projects-btn:hover,
 .dark-theme .expand-skills-btn:hover,
 .dark-theme .expand-experience-btn:hover,
 .dark-theme .contact-form-container:hover,
 .dark-theme .flip-card:hover {
-  transform: translateY(-10px) scale(1.03) !important;
+  /* transform removed - using JavaScript proximity-based magnetic effect */
+  box-shadow: 0 15px 30px rgba(170, 140, 255, 0.45) !important;
+}
+
+/* details-container removed - using JavaScript proximity-based magnetic effect */
+.dark-theme .details-container:hover {
+  box-shadow: 0 15px 30px rgba(170, 140, 255, 0.45) !important;
+}
+
+/* about-pic removed - using JavaScript proximity-based magnetic effect */
+.dark-theme .about-pic:hover {
   box-shadow: 0 15px 30px rgba(170, 140, 255, 0.45) !important;
 }
 
@@ -98,11 +124,11 @@
   color: #000000 !important;
 }
 
-/* Project image hover effect - pop up */
+/* Project image hover effect - removed for proximity magnetic effect */
 .project-img {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  /* transition removed - using JavaScript proximity-based magnetic effect */
 }
 
 .flip-card-front:hover .project-img {
-  transform: translateY(-8px) scale(1.05) !important;
+  /* transform removed - using JavaScript proximity-based magnetic effect */
 }

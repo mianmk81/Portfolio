@@ -21,26 +21,24 @@ function initProjectExpansion() {
     if (expandableProjects.classList.contains('hidden')) {
       // First add the expanded class to trigger the transition
       expandableProjects.classList.add('expanded');
-      
+
       // Then remove the hidden class after a tiny delay to ensure transition works
       setTimeout(() => {
         expandableProjects.classList.remove('hidden');
       }, 10);
-      
+
       // Update arrow and label
-      arrow.classList.remove('fa-angle-down');
-      arrow.classList.add('fa-angle-up');
+      arrow.classList.add('rotated');
       label.textContent = 'Collapse Projects';
     } else {
       // First remove the expanded class
       expandableProjects.classList.remove('expanded');
-      
+
       // Then add the hidden class
       expandableProjects.classList.add('hidden');
-      
+
       // Update arrow and label
-      arrow.classList.remove('fa-angle-up');
-      arrow.classList.add('fa-angle-down');
+      arrow.classList.remove('rotated');
       label.textContent = 'Expand Projects';
     }
   });

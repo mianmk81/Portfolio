@@ -111,7 +111,7 @@
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title" id="typing-name"><span id="typed-text"></span><span class="typing-cursor">|</span></h1>
-      <p class="section__text__p2" style="font-size: 1.3rem; margin-top: 1rem; margin-bottom: 1rem;">AI/ML Engineer • Deploying Production Models at Scale</p>
+      <p class="section__text__p2" style="font-size: 1.3rem; margin-top: 1rem; margin-bottom: 1rem;">Data Scientist & ML Engineer • Turning Data Into Impact</p>
       <div class="btn-container">
         <button class="btn btn-color-2" onclick="downloadResume()">
           Download Resume
@@ -1067,18 +1067,12 @@
       if (expandable.classList.contains('hidden')) {
         expandable.classList.remove('hidden');
         expandable.classList.add('expanded');
-        skillsArrow.classList.remove('fa-angle-down');
-        skillsArrow.classList.add('fa-angle-up');
-        skillsArrow.style.marginTop = '0';
-        skillsArrow.style.marginBottom = '0.2em';
+        skillsArrow.classList.add('rotated');
         label.textContent = 'Collapse Skills';
       } else {
         expandable.classList.remove('expanded');
         expandable.classList.add('hidden');
-        skillsArrow.classList.remove('fa-angle-up');
-        skillsArrow.classList.add('fa-angle-down');
-        skillsArrow.style.marginBottom = '0';
-        skillsArrow.style.marginTop = '0.2em';
+        skillsArrow.classList.remove('rotated');
         label.textContent = 'Expand Skills';
       }
     });

@@ -30,7 +30,7 @@
 }
 
 #expandable-projects .project-container:hover {
-  transform: translateY(-5px) !important;
+  /* transform removed - using JavaScript proximity-based magnetic effect */
   box-shadow: 0 12px 24px rgba(100, 100, 255, 0.3) !important;
 }
 
